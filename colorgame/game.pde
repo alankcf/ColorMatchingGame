@@ -1,4 +1,11 @@
+int w = int (random (0, 6));
+int c = int (random(0, 6));
+
 void game () {
+  
+  //font
+  textFont(font);
+  
   //background (0);
   fill(orange);
   text("GAME", width/2, height/2);
@@ -16,13 +23,56 @@ void game () {
   text("NO", 3 *width/4, height/5);
   text("MATCH", 3 *width/4, 2 * height/5);
   
-  //random colors and words
-  //int w = int (random (0, 6));
-  //int c = int (random(0, 6));
+  fill(colors[c]);
+  text(words[w], width/2, 2*height/3);
   
+  textSize(25);
+  fill(darkyellow);
+  text("Points:" + score, 700, 700);
+  
+  //time 
+  time = time - 0.1;
+  //textSize(25);
+  //fill(darkyellow);
+  //text("Time: " + time, 200, 500);
+  fill(darkyellow);
+  rect(100, 670, 200, 50);
+  fill(darkblue);
+  rect(100, 670, time, 50);
+  
+  if (time == 0) {
+    mode = GAMEOVER;
+  }
 }
+
 
 void gameClicks () {
   //mode = PAUSE;
-  mode = GAMEOVER;
+  
+  // Match
+  if (mouseX < 400) {
+    if (w == c) {
+      score = score + 1;
+      time = 200;
+      
+    //text(words[w], width/2, 2*height/3);
+    } else {
+      mode = GAMEOVER;
+    }
+    
+  }
+  //Not Match
+  if (mouseX > 400) {
+    if (w == c) {
+    mode = GAMEOVER;
+    } else {
+      score = score + 1;
+      time = 200;
+      
+    }
+  }
+}
+
+void mousePressed () {
+
 }
