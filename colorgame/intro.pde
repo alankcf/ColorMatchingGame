@@ -3,6 +3,8 @@ int numberOfFrames;
 int f;
 
 void intro () {
+  
+  //gif
   numberOfFrames = 7;
   gif = new PImage [numberOfFrames];
   

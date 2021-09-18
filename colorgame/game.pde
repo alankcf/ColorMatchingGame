@@ -23,14 +23,16 @@ void game () {
   text("NO", 3 *width/4, height/5);
   text("MATCH", 3 *width/4, 2 * height/5);
   
+  //display
   fill(colors[c]);
   text(words[w], width/2, 2*height/3);
   
+  //Points
   textSize(25);
   fill(darkyellow);
   text("Points:" + score, 700, 700);
   
-  //time 
+  //time bar 
   time = time - 0.1;
   //textSize(25);
   //fill(darkyellow);

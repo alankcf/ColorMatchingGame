@@ -1,3 +1,12 @@
+//Alan Fung
+// Sept 17, 2021
+// Color Game
+
+//THINGS TO WORK ON
+// GENERATE NEW PUZZLES
+// 50% chance of the puzzle be a matching puzzle.
+// HIGH SCORE
+
 //mode variables
 int mode;
 final int INTRO = 0;
@@ -18,8 +27,6 @@ color yellow = #E8BB3F, y;
 color black = #030303;
 color darkyellow = #FFAC12;
 color darkblue = #272D4D;
-
-
 color purple = #F50A60;
 
 String [] words;
@@ -31,12 +38,14 @@ float time;
 //font
 PFont font;
  
-
 void setup () {
-  
+  //fonts
   font = createFont ("Kanit-Light.ttf", 2);
+  
   size(800, 800);
   mode = INTRO;
+  
+  //random colors
   words = new String [7];
   colors = new color [7];
   words[0] = "red";
