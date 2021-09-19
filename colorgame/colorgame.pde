@@ -1,16 +1,15 @@
-//Alan Fung
+// Alan Fung
 // Sept 17, 2021
 // Color Game
 
 //THINGS TO WORK ON
-// GENERATE NEW PUZZLES
+// HOW TO STOP HAVE THE GENERATED PUZZLES BE A CYCLE
 
 //mode variables
 int mode;
 final int INTRO = 0;
 final int GAME = 1;
-final int PAUSE = 2;
-final int GAMEOVER = 3;
+final int GAMEOVER = 2;
 
 // colors
 color pink = #EAA7FF;
@@ -24,7 +23,7 @@ color yellow = #E8BB3F, y;
 color black = #030303;
 color darkyellow = #FFAC12;
 color darkblue = #272D4D;
-color purple = #F50A60;
+color purple = #6E06B9;
 
 String [] words;
 color [] colors;
@@ -37,6 +36,8 @@ float time;
 //font
 PFont font;
 
+int w;
+int c;
 
 void setup () {
   //fonts
@@ -66,6 +67,8 @@ void setup () {
 
   time = 200;
   //highscore = 0;
+  w = int (random (0, 6));
+  c = int (random(w+1, w));
 }
 
 void draw () {
@@ -73,8 +76,6 @@ void draw () {
     intro();
   } else if (mode == GAME) {
     game();
-  } else if (mode == PAUSE) {
-    pause();
   } else if (mode == GAMEOVER) {
     gameover();
   } else {

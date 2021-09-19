@@ -1,5 +1,5 @@
-int w = int (random (0, 6));
-int c = int (random(w, w+1));
+//int w = int (random (0, 6));
+//int c = int (random(w, w+1));
 
 void game () {
   
@@ -28,13 +28,19 @@ void game () {
     fill(colors[0]);
   } else {
   fill(colors[c]);
-}
+  }
+  
   text(words[w], width/2, 2*height/3);
   
   //Points
   textSize(25);
   fill(darkyellow);
+  
+  if (score > 1) {
   text("Points:" + score, 700, 700);
+  } else {
+    text("Point:" + score, 700, 700);
+  }
   
   //time bar 
   time = time - 1;
@@ -46,6 +52,7 @@ void game () {
   fill(darkblue);
   rect(100, 670, time, 50);
   
+  // time elasped
   if (time == 0) {
     mode = GAMEOVER;
   }
@@ -53,6 +60,7 @@ void game () {
 
 
 void gameClicks () {
+  
   //mode = PAUSE;
   
   // Match
@@ -60,18 +68,28 @@ void gameClicks () {
     if (w == c) {
       score = score + 1;
       time = 200;
+      if (w < 5) {
+      w = int (random (w+1, w+2));
+      } else if (w >= 5) {
+      w = int (random (w-5, w-4));
+      }
+  if (w < 5) {
+  c = int (random (w, w + 1));
+  } else if (w >= 5) {
+  c = int (random (w - 5, w-4));
+  }
       
       if (score > highscore) {
       highscore = highscore + 1;
       
       }
-      
-    //text(words[w], width/2, 2*height/3);
+     
     } else {
       mode = GAMEOVER;
     }
-    
+     
   }
+  
   //Not Match
   if (mouseX > 400) {
     if (w == c) {
@@ -80,11 +98,17 @@ void gameClicks () {
       score = score + 1;
       highscore = highscore + 1;
       time = 200;
+      if (w < 5) {
+      w = int (random (w+1, w+2));
+      } else if (w >= 5) {
+      w = int (random (w-2, w-1));
+      }
+  if (w < 5) {
+  c = int (random (w, w + 1));
+  } else if (w >= 5) {
+  c = int (random (w - 1, w));
+  }
       
     }
   }
-}
-
-void mousePressed () {
-
 }
