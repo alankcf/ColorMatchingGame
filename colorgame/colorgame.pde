@@ -4,8 +4,6 @@
 
 //THINGS TO WORK ON
 // GENERATE NEW PUZZLES
-// 50% chance of the puzzle be a matching puzzle.
-// HIGH SCORE
 
 //mode variables
 int mode;
@@ -18,9 +16,8 @@ final int GAMEOVER = 3;
 color pink = #EAA7FF;
 color green = #A7FFB7, x;
 color white = #FFFFFF;
-color brown = #6C4846;
-color red = #A02D03;
-color truered = #FF4B4B;
+color brown = #896120;
+color red = #F70000;
 color orange = #FA8303;
 color blue = #03ADFA;
 color yellow = #E8BB3F, y;
@@ -33,11 +30,14 @@ String [] words;
 color [] colors;
 
 int score;
+int highscore;
+int truehighscore;
 float time;
 
 //font
 PFont font;
- 
+
+
 void setup () {
   //fonts
   font = createFont ("Kanit-Light.ttf", 2);
@@ -65,7 +65,7 @@ void setup () {
   colors [6] = brown;
 
   time = 200;
-  
+  //highscore = 0;
 }
 
 void draw () {

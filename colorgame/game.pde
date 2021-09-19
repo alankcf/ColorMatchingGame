@@ -1,5 +1,5 @@
 int w = int (random (0, 6));
-int c = int (random(0, 6));
+int c = int (random(w, w+1));
 
 void game () {
   
@@ -24,7 +24,11 @@ void game () {
   text("MATCH", 3 *width/4, 2 * height/5);
   
   //display
+  if (w == 6) {
+    fill(colors[0]);
+  } else {
   fill(colors[c]);
+}
   text(words[w], width/2, 2*height/3);
   
   //Points
@@ -33,7 +37,7 @@ void game () {
   text("Points:" + score, 700, 700);
   
   //time bar 
-  time = time - 0.1;
+  time = time - 1;
   //textSize(25);
   //fill(darkyellow);
   //text("Time: " + time, 200, 500);
@@ -57,6 +61,11 @@ void gameClicks () {
       score = score + 1;
       time = 200;
       
+      if (score > highscore) {
+      highscore = highscore + 1;
+      
+      }
+      
     //text(words[w], width/2, 2*height/3);
     } else {
       mode = GAMEOVER;
@@ -69,6 +78,7 @@ void gameClicks () {
     mode = GAMEOVER;
     } else {
       score = score + 1;
+      highscore = highscore + 1;
       time = 200;
       
     }

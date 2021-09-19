@@ -13,10 +13,32 @@ void gameover () {
   fill(darkyellow);
   
   if (score > 1) {
-  text("Points: " + score, 400, 700);
+  text("Points: " + score, 400, 600);
   } else {
-  text("Point: " + score, 400, 700);
+  text("Point: " + score, 400, 600);
   } 
+  
+  
+  
+  //highscore
+  if (score > highscore) {
+    //score = highscore;
+    text("Highscore: " + score, 400, 700);
+  } 
+  
+  if (score == highscore) {
+  text("Highscore: " + score, 400, 700);
+}
+  
+  if (score < highscore) {
+    //highscore = highscore;
+    truehighscore = highscore;
+    text("Highscore: " + truehighscore, 400, 700);
+  } else if (score == 0) {
+    text("Highscore: " + score, 400, 700);
+  }
+
+  
 }
 
 void gameoverClicks () {
