@@ -1,8 +1,4 @@
-//int w = int (random (0, 6));
-//int c = int (random(w, w+1));
-
 void game () {
-  
   //font
   textFont(font);
   
@@ -61,8 +57,6 @@ void game () {
 
 void gameClicks () {
   
-  //mode = PAUSE;
-  
   // Match
   if (mouseX < 400) {
     if (w == c) {
@@ -101,7 +95,7 @@ void gameClicks () {
       if (w < 5) {
       w = int (random (w+1, w+2));
       } else if (w >= 5) {
-      w = int (random (w-2, w-1));
+      w = int (random (w-5, w-4));
       }
   if (w < 5) {
   c = int (random (w, w + 1));
