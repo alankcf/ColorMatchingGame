@@ -63,14 +63,14 @@ void gameClicks () {
       score = score + 1;
       time = 200;
       if (w < 5) {
-      w = int (random (w+1, w+2));
+      w = int (random (w+1, w+3));
       } else if (w >= 5) {
-      w = int (random (w-5, w-4));
+      w = int (random (w-5, w-3));
       }
   if (w < 5) {
-  c = int (random (w, w + 1));
+  c = int (random (w, w + 2));
   } else if (w >= 5) {
-  c = int (random (w - 5, w-4));
+  c = int (random (w - 5, w-3));
   }
       
       if (score > highscore) {
@@ -93,14 +93,14 @@ void gameClicks () {
       highscore = highscore + 1;
       time = 200;
       if (w < 5) {
-      w = int (random (w+1, w+2));
+      w = int (random (w+1, w+3));
       } else if (w >= 5) {
-      w = int (random (w-5, w-4));
+      w = int (random (w-5, w-3));
       }
   if (w < 5) {
-  c = int (random (w, w + 1));
+  c = int (random (w, w + 2));
   } else if (w >= 5) {
-  c = int (random (w - 1, w));
+  c = int (random (w - 2, w));
   }
       
     }
