@@ -100,7 +100,7 @@ void gameClicks () {
   if (w < 5) {
   c = int (random (w, w + 2));
   } else if (w >= 5) {
-  c = int (random (w - 2, w));
+  c = int (random (w - 1, w + 1));
   }
       
     }
