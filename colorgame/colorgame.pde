@@ -1,9 +1,6 @@
 // Alan Fung
-// Sept 17, 2021
+// Sept 20, 2021
 // Color Game
-
-//THINGS TO WORK ON
-// HOW TO STOP HAVE THE GENERATED PUZZLES BE A CYCLE
 
 //mode variables
 int mode;
