@@ -58,7 +58,7 @@ void game () {
   fill(darkblue);
   rect(0, 0, 800, 50);
   fill(white);
-  text("Match or No Match?", width/2, 33);
+  text("Is it a Match?", width/2, 33);
 }
 
 
