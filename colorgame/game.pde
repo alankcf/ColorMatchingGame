@@ -13,11 +13,13 @@ void game () {
   rect(400, 0, 400, 800);
   
   //text on options
-  textSize(100);
+  textSize(120);
   text("MATCH", width/4, height/3);
   fill(0);
   text("NO", 3 *width/4, height/5);
   text("MATCH", 3 *width/4, 2 * height/5);
+  
+  textSize(100);
   
   //display
   if (w == 6) {
@@ -33,9 +35,9 @@ void game () {
   fill(darkyellow);
   
   if (score > 1) {
-  text("Points:" + score, 700, 700);
+  text("Points: " + score, 700, 700);
   } else {
-    text("Point:" + score, 700, 700);
+    text("Point: " + score, 700, 700);
   }
   
   //time bar 

@@ -21,6 +21,7 @@ color black = #030303;
 color darkyellow = #FFAC12;
 color darkblue = #272D4D;
 color purple = #6E06B9;
+color darkred = #F25D5D;
 
 String [] words;
 color [] colors;

@@ -3,13 +3,13 @@ void gameover () {
   textFont(font);
   
   //text
-  background(red);
-  fill(brown);
+  background(darkred);
+  fill(darkyellow);
   textSize(100);
-  text("GAMEOVER", width/2, height/2);
+  text("GAMEOVER", width/2, height/3);
   
   //display score
-  textSize(50);
+  textSize(40);
   fill(darkyellow);
   
   if (score > 1) {
