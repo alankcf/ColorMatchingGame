@@ -39,7 +39,8 @@ int c;
 
 void setup () {
   //fonts
-  font = createFont ("Kanit-Light.ttf", 2);
+  //font = createFont ("Kanit-Light.ttf", 2);
+  font = createFont ("FredokaOne-Regular.ttf", 2);
   
   size(800, 800);
   mode = INTRO;

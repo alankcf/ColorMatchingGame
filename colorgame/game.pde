@@ -5,7 +5,7 @@ void game () {
   //background (0);
   fill(orange);
   text("GAME", width/2, height/2);
- 
+  
   //options
   fill(0);
   rect(0, 0, 400, 800);
@@ -13,13 +13,12 @@ void game () {
   rect(400, 0, 400, 800);
   
   //text on options
-  textSize(120);
-  text("MATCH", width/4, height/3);
+  textSize(110);
+  text("TRUE", width/4, height/3);
   fill(0);
-  text("NO", 3 *width/4, height/5);
-  text("MATCH", 3 *width/4, 2 * height/5);
+  text("FALSE", 3*width/4, height/3);
   
-  textSize(100);
+  textSize(70);
   
   //display
   if (w == 6) {
@@ -54,6 +53,12 @@ void game () {
   if (time == 0) {
     mode = GAMEOVER;
   }
+  //question
+  textSize(20);
+  fill(darkblue);
+  rect(0, 0, 800, 50);
+  fill(white);
+  text("Match or No Match?", width/2, 33);
 }
 
 
