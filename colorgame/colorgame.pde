@@ -1,5 +1,5 @@
 // Alan Fung
-// Sept 20, 2021
+// Sept 23, 2021
 // Color Game
 
 //mode variables
