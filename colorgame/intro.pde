@@ -1,9 +1,4 @@
-PImage[] gif;
-int numberOfFrames;
-int f;
-
 void intro () {
-  
   //gif
   numberOfFrames = 7;
   gif = new PImage [numberOfFrames];
@@ -29,11 +24,13 @@ void intro () {
   textSize(25);
   text("Click anywhere to begin!", width/2, 3* height/3.5);
   
+  //puzzles
   if (w <= 3) {
-      w = int (random (w+1, w+2));
-      } else if (w > 3) {
-      w = int (random (w-2, w-1));
-      }
+  w = int (random (w+1, w+2));
+  } else if (w > 3) {
+  w = int (random (w-2, w-1));
+  }
+  
   if (w <= 3) {
   c = int (random (w, w + 1));
   } else if (w > 3) {

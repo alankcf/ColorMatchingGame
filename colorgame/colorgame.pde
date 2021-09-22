@@ -37,6 +37,10 @@ PFont font;
 int w;
 int c;
 
+PImage[] gif;
+int numberOfFrames;
+int f;
+
 void setup () {
   //fonts
   //font = createFont ("Kanit-Light.ttf", 2);

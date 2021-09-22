@@ -81,10 +81,9 @@ void gameClicks () {
   c = int (random (w - 1, w + 1));
   }
       
-      if (score > highscore) {
-      highscore = highscore + 1;
-      
-      }
+  if (score > highscore) {
+  highscore = highscore + 1;
+     }
      
     } else {
       mode = GAMEOVER;

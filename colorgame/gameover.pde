@@ -11,7 +11,6 @@ void gameover () {
   //display score
   textSize(40);
   fill(darkyellow);
-  
   if (score > 1) {
   text("Points: " + score, 400, 600);
   } else {
@@ -35,7 +34,6 @@ void gameover () {
   } else if (score == 0) {
     text("Highscore: " + score, 400, 700);
   }
-  
   
 }
 
