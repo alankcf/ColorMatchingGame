@@ -74,6 +74,7 @@ void gameClicks () {
       } else if (w >= 5) {
       w = int (random (w-5, w-3));
       }
+      
   if (w < 5) {
   c = int (random (w - 1, w + 1));
   } else if (w >= 5) {
@@ -104,6 +105,7 @@ void gameClicks () {
       } else if (w >= 5) {
       w = int (random (w-5, w-3));
       }
+      
   if (w < 5) {
   c = int (random (w, w + 2));
   } else if (w >= 5) {
