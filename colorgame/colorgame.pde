@@ -67,7 +67,7 @@ void setup () {
   time = 200;
   //highscore = 0;
   w = int (random (0, 6));
-  c = int (random(w, w+2)); // not inclusive to last value
+  c = int (random(w+1, w)); // not inclusive to last value
 }
 
 void draw () {

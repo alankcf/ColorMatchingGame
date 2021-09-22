@@ -58,7 +58,7 @@ void game () {
   fill(darkblue);
   rect(0, 0, 800, 50);
   fill(white);
-  text("Is it a Match?", width/2, 33);
+  text("Match or No Match?", width/2, 33);
 }
 
 
@@ -75,9 +75,9 @@ void gameClicks () {
       w = int (random (w-5, w-3));
       }
   if (w < 5) {
-  c = int (random (w, w + 2));
+  c = int (random (w - 1, w + 1));
   } else if (w >= 5) {
-  c = int (random (w - 5, w-3));
+  c = int (random (w - 1, w + 1));
   }
       
       if (score > highscore) {
@@ -100,7 +100,7 @@ void gameClicks () {
       highscore = highscore + 1;
       time = 200;
       if (w < 5) {
-      w = int (random (w+1, w+3));
+      w = int (random (w, w+3));
       } else if (w >= 5) {
       w = int (random (w-5, w-3));
       }
