@@ -18,21 +18,18 @@ void game () {
   fill(0);
   text("FALSE", 3*width/4, height/3);
   
-  textSize(70);
-  
   //display
-  if (w == 6) {
-    fill(colors[0]);
-  } else {
+  textSize(70);
+  //if (w == 6) {
+  //  fill(colors[0]);
+  //} else {
   fill(colors[c]);
-  }
-  
+  //}
   text(words[w], width/2, 2*height/3);
   
   //Points
   textSize(25);
   fill(darkyellow);
-  
   if (score > 1) {
   text("Points: " + score, 700, 700);
   } else {
@@ -41,9 +38,6 @@ void game () {
   
   //time bar 
   time = time - 1;
-  //textSize(25);
-  //fill(darkyellow);
-  //text("Time: " + time, 200, 500);
   fill(darkyellow);
   rect(100, 670, 200, 50);
   fill(darkblue);
@@ -63,7 +57,6 @@ void game () {
 
 
 void gameClicks () {
-  
   // Match
   if (mouseX < 400) {
     if (w == c) {
@@ -97,7 +90,9 @@ void gameClicks () {
     mode = GAMEOVER;
     } else {
       score = score + 1;
+      if (score > highscore) {
       highscore = highscore + 1;
+      }
       time = 200;
       if (w < 5) {
       w = int (random (w, w+3));

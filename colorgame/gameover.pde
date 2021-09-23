@@ -17,15 +17,11 @@ void gameover () {
   text("Point: " + score, 400, 600);
   } 
   
-  //highscore
-  if (score > highscore) {
+  //new highscore
+  if (score >= highscore) {
     //score = highscore;
     text("Highscore: " + score, 400, 700);
   } 
-  
-  if (score == highscore) {
-  text("Highscore: " + score, 400, 700);
-}
   
   if (score < highscore) {
     //highscore = highscore;
@@ -34,7 +30,6 @@ void gameover () {
   } else if (score == 0) {
     text("Highscore: " + score, 400, 700);
   }
-  
 }
 
 void gameoverClicks () {

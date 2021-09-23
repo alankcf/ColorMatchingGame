@@ -23,9 +23,13 @@ color darkblue = #272D4D;
 color purple = #6E06B9;
 color darkred = #F25D5D;
 
+//puzzles
 String [] words;
 color [] colors;
+int w;
+int c;
 
+//score
 int score;
 int highscore;
 int truehighscore;
@@ -34,22 +38,19 @@ float time;
 //font
 PFont font;
 
-int w;
-int c;
-
+//gif
 PImage[] gif;
 int numberOfFrames;
 int f;
 
 void setup () {
-  //fonts
-  //font = createFont ("Kanit-Light.ttf", 2);
+  //font
   font = createFont ("FredokaOne-Regular.ttf", 2);
   
   size(800, 800);
   mode = INTRO;
   
-  //random colors
+  //random colors and words
   words = new String [7];
   colors = new color [7];
   words[0] = "red";
@@ -67,9 +68,11 @@ void setup () {
   colors [4] = pink;
   colors [5] = purple;
   colors [6] = brown;
-
+  
+  //timer
   time = 200;
-  //highscore = 0;
+  
+  //generate puzzle
   w = int (random (0, 6));
   c = int (random(w+1, w)); // not inclusive to last value
 }
