@@ -19,12 +19,10 @@ void gameover () {
   
   //new highscore
   if (score >= highscore) {
-    //score = highscore;
     text("Highscore: " + score, 400, 700);
   } 
   
   if (score < highscore) {
-    //highscore = highscore;
     truehighscore = highscore;
     text("Highscore: " + truehighscore, 400, 700);
   } else if (score == 0) {

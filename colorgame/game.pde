@@ -2,7 +2,6 @@ void game () {
   //font
   textFont(font);
   
-  //background (0);
   fill(orange);
   text("GAME", width/2, height/2);
   
@@ -20,11 +19,7 @@ void game () {
   
   //display
   textSize(70);
-  //if (w == 6) {
-  //  fill(colors[0]);
-  //} else {
   fill(colors[c]);
-  //}
   text(words[w], width/2, 2*height/3);
   
   //Points
